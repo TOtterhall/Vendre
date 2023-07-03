@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* header and footerstuff */
+header {
+  background-image: url("vendre_logo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  margin: 0 auto;
+  background-color: rgba(238, 238, 238, 0.5);
+  height: 12rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  margin: 0 auto;
+  height: 3rem;
+  width: 100%;
+  align-items: center;
+  padding-left: 8rem;
+  border-top: 1.3px solid rgb(0, 0, 0);
+  width: 100%;
+  font-family: "Poppins", "Bold500";
+  font-size: 18px;
+}
+
+/* menu */
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin: 0 auto;
+  font-weight: bold;
+  list-style-type: none;
+  flex-wrap: wrap;
+  background-color: rgba(238, 238, 238, 0.9);
+  border-bottom: 1.3px solid rgb(0, 0, 0);
+  width: 100%;
+}
+
+li {
+  margin: 1rem;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", "Bold500";
+  font-size: 24px;
+}
+
+.contact {
+  color: rgb(30, 108, 112);
+  font-weight: bold;
+  font-family: "Poppins", "Bold700";
+}
+
+/* init */
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: 254, 254, 254, 255;
+  flex-wrap: wrap;
+  padding: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(238, 238, 238, 255);
+  width: 14rem;
+  height: 18rem;
+  border-radius: 5%;
+  margin-bottom: 20px;
+  margin-top: 5rem;
+}
+
+.profile-picture {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  margin-top: 1rem;
+}
+
+/* pagination */
+div.pagination {
+  grid-template-columns: none;
+}
+
+.pagination {
+  width: 20rem;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+.pagination1,
+.pagination2 {
+  width: 50px;
+  height: 50px;
+
+  margin-top: 1rem;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  footer {
+    position: relative;
+    margin-top: auto;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 32px;
+    border: 3px solid #000;
+    font-weight: 600;
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}

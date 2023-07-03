@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Vendre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Montserrat:wght@200;400&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app" class="container">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="menu">
+        <li href="#">Home</li>
+        <li href="#">About</li>
+        <li href="#">Partners</li>
+        <li href="#" class="contact">Contact</li>
+      </ul>
+      <header></header>
+      <div class="card-container">
+        <div class="card" v-for="user in users" :key="user.id">
+          <img class="profile-picture" :src="user.avatar" alt="User Avatar" />
+          <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+          <p><a :href="'mailto:' + user.email">Contact</a></p>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button
+          class="pagination1"
+          @click="previousPage"
+          :disabled="page === 1"
+        >
+          1
+        </button>
+        <button
+          class="pagination2"
+          @click="nextPage"
+          :disabled="page === totalPages"
+        >
+          2
+        </button>
+      </div>
+
+      <footer>Copyright © 2023 Therese Otterhäll</footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
